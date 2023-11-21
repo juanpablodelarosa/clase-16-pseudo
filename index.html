@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:visited {
+            background-color: aquamarine;
+            color: seagreen
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: slategray;
+            text-decoration: none;
+            transition: 1s all;
+
+        }
+
+        input {
+            outline: none;
+            /*SETER EL BORDE DE UN INPUT*/
+            border: red 2px solid;
+        }
+
+        input:focus {
+            background-color: chartreuse;
+        }
+
+        input:active {
+            background-color: yellow;
+        }
+
+        input:disabled {
+            background-color: aqua;
+        }
+
+        li {
+            transition: all 2s;
+        }
+
+        li:nth-child(odd) {
+            background-color: coral;
+        }
+
+        li:nth-child(odd)::before {
+            content: "🤔";
+            transition: all 0.3s;
+        }
+
+        li:nth-child(even) {
+            background-color: blue;
+        }
+
+        li:nth-child(even)::before {
+            transition: all 0.3;
+            content: ⚽;
+        }
+
+        @media (max-width: 500px) {
+
+            li {
+                transition: 1s all;
+            }
+
+            li:hover::before {
+                content: 👌;
+                font-size: 10px;
+            }
+
+        }
+
+
+        /*
+        li::first-letter {
+            font-size: 40px;
+            color: rgb(105, 48, 48);
+            font-weight: 800;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <a target="_blank" href="https://www.facebook.com/?locale=es_LA">visita mi red social</a>
+
+    <input type="text">
+    <ul>
+        <li>hola</li>
+        <li>como estas</li>
+        <li>todo bien</li>
+        <li>me alegro</li>
+    </ul>
+
+</body>
+
+</html>
